@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Phone, Instagram, MessageSquare, ExternalLink, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Instagram, MessageSquare, ExternalLink, X, ChevronLeft, ChevronRight, FileText } from 'lucide-react';
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -593,6 +593,17 @@ const Portfolio = () => {
           </p>
         </div>
       </footer>
+
+      {/* Resume Popup Button */}
+      <div className="fixed bottom-6 right-6 z-40">
+        <button
+          onClick={() => window.open('https://drive.google.com/file/d/1D91FTt9yV-RGbwWGfpb3y7OpqIyFIuTC/view?usp=sharing', '_blank')}
+          className="bg-yellow-400 text-slate-900 p-4 rounded-full shadow-lg hover:bg-yellow-300 transition-all transform hover:scale-110 hover:shadow-xl border-2 border-yellow-400/50"
+          title="View Resume"
+        >
+          <FileText size={24} />
+        </button>
+      </div>
 
       {/* Project Modal */}
       {selectedProject && (
